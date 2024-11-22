@@ -15,15 +15,15 @@
             font-family: Arial, sans-serif;
             background-color: #3E1F2E; /* Deep burgundy background */
             color: #F5F5F5; /* Light text for contrast */
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMu/b3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmxlYWYgeyBmaWxsOiAj6B3Fjz48L3N0eWxlPgogICAgPC9kZWZzPgogICAgPGxpbmUgeDE9IjAiIHkxPSIwIiB4Mj0iNjQiIHkyPSI2NCIgc3R5bGU9InN0cm9rZTogI2M2NjY2Njsgc3Ryb2tlLXdpZHRoOiAwLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyMCIgZmlsbD0iIz8zMzMzMCIvPgogIDwvc3ZnPg==');
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMu/b3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmxlYWYgeyBmaWxsOiAjNDAwMDAwOyB9CiAgICA8L3N0eWxlPgogICAgPGxpbmUgeDE9IjAiIHkxPSIwIiB4Mj0iNjQiIHkyPSI2NCIgc3R5bGU9InN0cm9rZTogI2M2NjY2Njsgc3Ryb2tlLXdpZHRoOiAwLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyMCIgZmlsbD0iIzMzMzMzMyIvPgogIDwvc3ZnPg==');
             background-repeat: repeat;
             background-size: 100px 100px;
         }
 
         header {
             text-align: center;
-            padding: 50px 20px;
-            background-color: rgba(62, 31, 46, 0.8); /* Semi-transparent overlay */
+            padding: 30px 20px;
+            background-color: rgba(62, 31, 46, 0.9); /* Semi-transparent overlay */
             background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLnBsYWNlIHsgZmlsbDojODQ3MzY3OyBzdHJva2U6IG5vbmU7IH0KICAgIDwvc3R5bGU+CgogICAgPC9kZWZzPgogICAgPHBhdGggY2xhc3M9InBsYWNlIiBkPSJNMzYsMTQgQzM2LDkuNjQ3LDMwLjM1NywwLDIzLDI2VjcwSDdWMjZINzZWMTR6Ii8+CiAgPC9zdmc+');
             background-repeat: no-repeat;
             background-position: center;
@@ -41,10 +41,36 @@
             color: #F0E68C; /* Khaki for subtlety */
         }
 
+        /* Summary Section */
+        .summary {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid #8B0000; /* Dark red border */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLnBsYWNlIHsgZmlsbDojODQ3MzY3OyBzdHJva2U6IG5vbmU7IH0KICAgIDwvc3R5bGU+CgogICAgPC9kZWZzPgogICAgPHBhdGggY2xhc3M9InBsYWNlIiBkPSJNMzYsMTQgQzM2LDkuNjQ3LDMwLjM1NywwLDIzLDI2VjcwSDdWMjZINzZWMTR6Ii8+CiAgPC9zdmc+');
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: 30px 30px;
+        }
+
+        .summary h2 {
+            color: #FFD700; /* Gold for headings */
+            margin-bottom: 10px;
+        }
+
+        .summary p {
+            line-height: 1.6;
+            color: #F5F5F5;
+        }
+
         .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
         }
 
@@ -52,8 +78,9 @@
             background-color: rgba(255, 255, 255, 0.1);
             border: 2px solid #8B0000; /* Dark red border */
             border-radius: 10px;
-            width: 300px;
-            margin: 15px;
+            width: 90%;
+            max-width: 600px;
+            margin: 15px 0;
             padding: 20px;
             text-align: center;
             position: relative;
@@ -62,7 +89,7 @@
         }
 
         .card:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         .card h2 {
@@ -95,13 +122,12 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
+            .summary {
+                width: 90%;
             }
 
             .card {
-                width: 80%;
+                width: 95%;
             }
         }
     </style>
@@ -111,6 +137,14 @@
         <h1>Cabernet Sauvignon Wine Tasting</h1>
         <p>Explore the rich flavors and aromas</p>
     </header>
+
+    <!-- Summary Section -->
+    <div class="summary">
+        <h2>About Cabernet Sauvignon</h2>
+        <p>
+            Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. Originating from the Bordeaux region of France, it is renowned for its depth of flavor, high tannin content, and excellent aging potential. Wines made from Cabernet Sauvignon often exhibit notes of dark fruits like blackcurrant and plum, complemented by hints of oak, vanilla, and spice. This grape thrives in various climates, producing robust and structured wines that are a favorite among wine enthusiasts globally.
+        </p>
+    </div>
 
     <div class="container">
         <!-- Wine Card 1 -->
