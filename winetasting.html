@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cabernet Sauvignon Wine Tasting</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3E1F2E; /* Deep burgundy background */
+            color: #F5F5F5; /* Light text for contrast */
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMu/b3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmxlYWYgeyBmaWxsOiAj6B3Fjz48L3N0eWxlPgogICAgPC9kZWZzPgogICAgPGxpbmUgeDE9IjAiIHkxPSIwIiB4Mj0iNjQiIHkyPSI2NCIgc3R5bGU9InN0cm9rZTogI2M2NjY2Njsgc3Ryb2tlLXdpZHRoOiAwLjUiIC8+CiAgICA8Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyMCIgZmlsbD0iIz8zMzMzMCIvPgogIDwvc3ZnPg==');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(62, 31, 46, 0.8); /* Semi-transparent overlay */
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLnBsYWNlIHsgZmlsbDojODQ3MzY3OyBzdHJva2U6IG5vbmU7IH0KICAgIDwvc3R5bGU+CgogICAgPC9kZWZzPgogICAgPHBhdGggY2xhc3M9InBsYWNlIiBkPSJNMzYsMTQgQzM2LDkuNjQ3LDMwLjM1NywwLDIzLDI2VjcwSDdWMjZINzZWMTR6Ii8+CiAgPC9zdmc+');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px 50px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #D4AF37; /* Gold color for elegance */
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #F0E68C; /* Khaki for subtlety */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid #8B0000; /* Dark red border */
+            border-radius: 10px;
+            width: 300px;
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #FFD700; /* Gold for headings */
+        }
+
+        .card .description {
+            display: none;
+            margin-top: 15px;
+            text-align: left;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .card.active .description {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(62, 31, 46, 0.8);
+            color: #F5F5F5;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cabernet Sauvignon Wine Tasting</h1>
+        <p>Explore the rich flavors and aromas</p>
+    </header>
+
+    <div class="container">
+        <!-- Wine Card 1 -->
+        <div class="card" onclick="toggleCard(this)">
+            <h2>Wine 1: Classic Cabernet</h2>
+            <div class="description">
+                <strong>Tasting Notes:</strong>
+                <ul>
+                    <li>Blackcurrant</li>
+                    <li>Plum</li>
+                    <li>Oak</li>
+                    <li>Vanilla</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Wine Card 2 -->
+        <div class="card" onclick="toggleCard(this)">
+            <h2>Wine 2: Reserve Cabernet</h2>
+            <div class="description">
+                <strong>Tasting Notes:</strong>
+                <ul>
+                    <li>Cherry</li>
+                    <li>Espresso</li>
+                    <li>Chocolate</li>
+                    <li>Spice</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Wine Card 3 -->
+        <div class="card" onclick="toggleCard(this)">
+            <h2>Wine 3: Cabernet Blend</h2>
+            <div class="description">
+                <strong>Tasting Notes:</strong>
+                <ul>
+                    <li>Blackberry</li>
+                    <li>Cedar</li>
+                    <li>Leather</li>
+                    <li>Herbs</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Wine Card 4 -->
+        <div class="card" onclick="toggleCard(this)">
+            <h2>Wine 4: Organic Cabernet</h2>
+            <div class="description">
+                <strong>Tasting Notes:</strong>
+                <ul>
+                    <li>Raspberry</li>
+                    <li>Earth</li>
+                    <li>Tobacco</li>
+                    <li>Floral</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Wine Card 5 (Optional) -->
+        <div class="card" onclick="toggleCard(this)">
+            <h2>Wine 5: Limited Edition Cabernet</h2>
+            <div class="description">
+                <strong>Tasting Notes:</strong>
+                <ul>
+                    <li>Blueberry</li>
+                    <li>Smoke</li>
+                    <li>Oak</li>
+                    <li>Spiced Pepper</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Cabernet Sauvignon Tasting Event
+    </footer>
+
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
